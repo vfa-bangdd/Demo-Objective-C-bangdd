@@ -17,6 +17,7 @@
 		B596013628C6D59A00F6FF8B /* Demo_1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = B596013528C6D59A00F6FF8B /* Demo_1Tests.m */; };
 		B596014028C6D59A00F6FF8B /* Demo_1UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B596013F28C6D59A00F6FF8B /* Demo_1UITests.m */; };
 		B596014228C6D59A00F6FF8B /* Demo_1UITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B596014128C6D59A00F6FF8B /* Demo_1UITestsLaunchTests.m */; };
+		B596015028C7300700F6FF8B /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B596014F28C7300700F6FF8B /* SecondViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		B596013B28C6D59A00F6FF8B /* Demo_1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Demo_1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B596013F28C6D59A00F6FF8B /* Demo_1UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Demo_1UITests.m; sourceTree = "<group>"; };
 		B596014128C6D59A00F6FF8B /* Demo_1UITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Demo_1UITestsLaunchTests.m; sourceTree = "<group>"; };
+		B596014E28C7300700F6FF8B /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		B596014F28C7300700F6FF8B /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,8 @@
 				B596012728C6D59800F6FF8B /* LaunchScreen.storyboard */,
 				B596012A28C6D59800F6FF8B /* Info.plist */,
 				B596012B28C6D59800F6FF8B /* main.m */,
+				B596014E28C7300700F6FF8B /* SecondViewController.h */,
+				B596014F28C7300700F6FF8B /* SecondViewController.m */,
 			);
 			path = Demo_1;
 			sourceTree = "<group>";
@@ -266,6 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B596015028C7300700F6FF8B /* SecondViewController.m in Sources */,
 				B596012128C6D59000F6FF8B /* ViewController.m in Sources */,
 				B596011B28C6D59000F6FF8B /* AppDelegate.m in Sources */,
 				B596012C28C6D59800F6FF8B /* main.m in Sources */,
