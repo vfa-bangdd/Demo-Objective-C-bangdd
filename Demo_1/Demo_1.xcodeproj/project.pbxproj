@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B56BBFD228C8327700BAB683 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B56BBFD128C8327700BAB683 /* ThirdViewController.m */; };
 		B596011B28C6D59000F6FF8B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B596011A28C6D59000F6FF8B /* AppDelegate.m */; };
 		B596011E28C6D59000F6FF8B /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B596011D28C6D59000F6FF8B /* SceneDelegate.m */; };
 		B596012128C6D59000F6FF8B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B596012028C6D59000F6FF8B /* ViewController.m */; };
@@ -38,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B56BBFD028C8327700BAB683 /* ThirdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
+		B56BBFD128C8327700BAB683 /* ThirdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 		B596011628C6D59000F6FF8B /* Demo_1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo_1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B596011928C6D59000F6FF8B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B596011A28C6D59000F6FF8B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -120,6 +123,8 @@
 				B596012B28C6D59800F6FF8B /* main.m */,
 				B596014E28C7300700F6FF8B /* SecondViewController.h */,
 				B596014F28C7300700F6FF8B /* SecondViewController.m */,
+				B56BBFD028C8327700BAB683 /* ThirdViewController.h */,
+				B56BBFD128C8327700BAB683 /* ThirdViewController.m */,
 			);
 			path = Demo_1;
 			sourceTree = "<group>";
@@ -273,6 +278,7 @@
 			files = (
 				B596015028C7300700F6FF8B /* SecondViewController.m in Sources */,
 				B596012128C6D59000F6FF8B /* ViewController.m in Sources */,
+				B56BBFD228C8327700BAB683 /* ThirdViewController.m in Sources */,
 				B596011B28C6D59000F6FF8B /* AppDelegate.m in Sources */,
 				B596012C28C6D59800F6FF8B /* main.m in Sources */,
 				B596011E28C6D59000F6FF8B /* SceneDelegate.m in Sources */,

@@ -20,7 +20,7 @@
     [self.switchButton setOn:NO];
     /* Create the switch */
     self.mainSwitch = [[UISwitch alloc] initWithFrame:
-                       CGRectMake(180, 390, 0, 0)];
+                       CGRectMake(180, 420, 0, 0)];
     //self.mainSwitch.center = self.view.center;
     [self.view addSubview:self.mainSwitch];
     
@@ -34,7 +34,7 @@
 
     /* Customize the pickerView */
     self.myPicker = [[UIPickerView alloc] initWithFrame:
-                     CGRectMake(50, 480, 0, 0)];
+                     CGRectMake(50, 540, 0, 0)];
     self.myPicker.dataSource = self;
     //self.myPicker.center = self.view.center;
     [self.view addSubview:self.myPicker];
