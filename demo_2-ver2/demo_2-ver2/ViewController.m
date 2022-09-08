@@ -34,14 +34,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title=@"First Screen";
+    
     self.view.backgroundColor = [UIColor whiteColor];
     
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 100, 40)];
     imageView.contentMode = UIViewContentModeScaleAspectFit;
     
     UIImage *photo = [UIImage imageNamed:@"LogoTitle"];
-    
     [imageView setImage:photo];
+    
     self.navigationItem.titleView = imageView;
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]
