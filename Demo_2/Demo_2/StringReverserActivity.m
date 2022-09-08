@@ -6,6 +6,8 @@
 //
 
 #import "StringReverserActivity.h"
+#import "SecondViewController.h"
+#import "AppDelegate.h"
 
 @interface StringReverserActivity () <UIAlertViewDelegate>
 @property (nonatomic, strong) NSArray *activityItems;
@@ -23,7 +25,7 @@
     }
 
 - (NSString *) activityTitle{
-    return @"Reverse String";
+    return @"Custom Sharing Reverse String";
 }
 
 - (UIImage *) activityImage{
@@ -70,6 +72,8 @@ return [UIImage imageNamed:@"Reverse"];
     style:UIAlertActionStyleDefault
     handler:^(UIAlertAction * action) {}];
     [alert addAction:defaultAction];
+    SecondViewController *controller = (SecondViewController *)[UIApplication sharedApplication].keyWindow.rootViewController;
+    [controller presentViewController:alert animated:NO completion:nil];
 }
 
 @end

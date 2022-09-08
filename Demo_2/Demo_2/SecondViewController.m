@@ -7,6 +7,7 @@
 
 #import "SecondViewController.h"
 #import "StringReverserActivity.h"
+#import "ViewController.h"
 
 @interface SecondViewController () <UITextFieldDelegate>
 @property (nonatomic, strong) UITextField *textField;
@@ -63,14 +64,64 @@
     
     self.buttonShare = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     self.buttonShare.frame =
-        CGRectMake(20.0f, 320.0f, 280.0f, 44.0f);
-    [self.buttonShare setTitle:@"Share" forState:UIControlStateNormal];
-    [self.buttonShare addTarget:self action:@selector(handleShare:)
+        CGRectMake(20.0f, 340.0f, 280.0f, 44.0f);
+    [self.buttonShare setTitle:@"Share custom" forState:UIControlStateNormal];
+    [self.buttonShare addTarget:self
+                    action:@selector(handleShareCustom:)
                    forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.buttonShare];
 }
 
-- (void) viewDidAppear:(BOOL)animated{
+- (void) eventSetting{
+    self.textNumber = [[UILabel alloc] initWithFrame:CGRectMake(20, 390, self.view.frame.size.width - 20, 100)];
+    self.textNumber.numberOfLines = 2;
+    [self.textNumber setText:@"Click button bellow to go to setting"];
+    [self.textNumber sizeToFit];
+    [self.view addSubview:self.textNumber];
+    
+    self.buttonShare = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    self.buttonShare.frame =
+        CGRectMake(20.0f, 420.0f, 280.0f, 44.0f);
+    [self.buttonShare setTitle:@"Click" forState:UIControlStateNormal];
+    [self.buttonShare addTarget:self
+                    action:@selector(settingNavigate)
+                   forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.buttonShare];
+}
+
+- (void) demo1_12{
+    self.textNumber = [[UILabel alloc] initWithFrame:
+        CGRectMake(20, 480, self.view.frame.size.width - 20, 100)];
+    self.textNumber.numberOfLines = 2;
+    [self.textNumber setText:@"4. Implementing Navigation with UINavigationController "];
+    [self.textNumber sizeToFit];
+    [self.view addSubview:self.textNumber];
+    
+    self.buttonShare = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    self.buttonShare.frame =
+        CGRectMake(20.0f, 550.0f, 120.0f, 44.0f);
+    self.buttonShare.backgroundColor= [UIColor orangeColor];
+    [self.buttonShare setTitle:@"Next" forState:UIControlStateNormal];
+    [self.buttonShare addTarget:self
+                    action:@selector(handleNavigateSecondScreen:)
+                   forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.buttonShare];
+}
+
+- (void) settingNavigate{
+    NSDictionary *dict = [[NSDictionary alloc] init];
+    [[UIApplication sharedApplication]
+     openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString] options:dict completionHandler:^(BOOL success) {
+        
+    }];
+}
+
+- (void) handleNavigateSecondScreen: (id)sender{
+    ViewController *first = [self.storyboard instantiateViewControllerWithIdentifier:@"firstS"];
+    [self.navigationController pushViewController:first animated:YES];
+}
+
+- (void) handleShareCustom:(BOOL)animated{
     [super viewDidAppear:animated];
     NSArray *itemsToShare = @[
         @"Item 1",
@@ -81,7 +132,8 @@
     [[UIActivityViewController alloc]
      initWithActivityItems:itemsToShare
      applicationActivities:@[[StringReverserActivity new]]];
-    [self presentViewController:activity animated:YES completion:nil];
+    [self presentViewController:activity
+                       animated:YES completion:nil];
 }
 
 - (void)viewDidLoad {
@@ -90,6 +142,9 @@
     [self demo1_9];
     [self demo1_10];
     [self demo1_11];
+    [self demo1_12];
+    
+    [self eventSetting];
     
     
     // Do any additional setup after loading the view.
